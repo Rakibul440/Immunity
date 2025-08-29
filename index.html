@@ -205,7 +205,7 @@ h3 {
   font-size: 16px;
   margin: 10px 0 5px;
   text-align: center;
-  color: #444;
+  color: #8c8a9b;
 }
 
 .price {
@@ -246,6 +246,58 @@ h3 {
   border: 1px solid #999;
   border-radius: 5px;
   min-height: 300px;
+}
+
+/* ========= Youtube Video ========= */
+
+/* Row for videos */
+.video-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Each video box */
+.video-box {
+  flex: 1 1 500px;
+  max-width: 600px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.video-box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #8c8a9b;
+}
+
+.video-box p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-box {
+    max-width: 100%;
+  }
+
 }
 
 </style>
@@ -559,7 +611,7 @@ broadband connectivity. </p>
     <div class="product-slider">
       <div class="product-card">
         <span class="tag">Sale</span>
-        <img src="images/product1.jpeg" alt="Immunity Lotus Alpha">
+        <img src="images/products/product1.jpeg" alt="Immunity Lotus Alpha">
         <div class="overlay">
           <button style="width: 60%;">Quick View</button>
           <button style="width: 60%;">Add to Cart</button>
@@ -570,7 +622,7 @@ broadband connectivity. </p>
 
       <div class="product-card">
         <span class="tag">Sale</span>
-        <img src="images/product2.jpeg" alt="Immunity Lotus Alpha LX">
+        <img src="images/products/product2.jpeg" alt="Immunity Lotus Alpha LX">
         <div class="overlay">
           <button style="width: 60%;">Quick View</button>
           <button style="width: 60%;">Add to Cart</button>
@@ -581,7 +633,7 @@ broadband connectivity. </p>
 
       <div class="product-card">
         <span class="tag">Sale</span>
-        <img src="images/product5.jpeg" alt="Immunity Lotus Alpha OD">
+        <img src="images/products/product5.jpeg" alt="Immunity Lotus Alpha OD">
         <div class="overlay">
           <button style="width: 60%;">Quick View</button>
           <button style="width: 60%;">Add to Cart</button>
@@ -592,7 +644,7 @@ broadband connectivity. </p>
 
       <div class="product-card">
         <span class="tag">Sale</span>
-        <img src="images/product3.jpeg" alt="Immunity Lotus Alpha OD">
+        <img src="images/products/product3.jpeg" alt="Immunity Lotus Alpha OD">
         <div class="overlay">
           <button style="width: 60%;">Quick View</button>
           <button style="width: 60%;">Add to Cart</button>
@@ -603,7 +655,7 @@ broadband connectivity. </p>
 
       <div class="product-card">
         <span class="tag">Sale</span>
-        <img src="images/product4.jpeg" alt="Immunity Lotus Alpha OD">
+        <img src="images/products/product4.jpeg" alt="Immunity Lotus Alpha OD">
         <div class="overlay">
           <button style="width: 60%;">Quick View</button>
           <button style="width: 60%;">Add to Cart</button>
@@ -947,50 +999,43 @@ governance platforms.
 
 <!-- ========= YOUTUBE VIDEO ============ -->
 
-<!-- <section>
+<section>
   <div class="container">
 
-    <h2>See Our Customers Talk About Us</h2>
-    
-    <div class="testimonial">
-      <div class="video-container">
+    <h2 style="color: #8c8a9b;">See Our Customers Talk About Us</h2>
+
+    <div class="video-row">
+      <div class="video-box">
         <iframe width="560" height="315" 
-          src="https://youtu.be/Rsq0gZkvTng" 
+          src="https://www.youtube.com/embed/Rsq0gZkvTng?si=bO3FNRmJJbS7TLcp" 
           title="YouTube video player" 
           frameborder="0" 
           allowfullscreen>
         </iframe>
-      </div>
-      <div class="content">
-        <h3>Shri. Prakash Patil</h3>
+        <h2 style="text-align: left;">Shri. Prakash Patil</h2>
         <p>
-          A visionary at Kandivali, Shri. Prakash Patil is one of the first adopters of PMWANI in Mumbai City. 
+          A visionary at Kandivali, Shri. Prakash Patil is one of the first adopters of PMWANI in Mumbai City.
           His smart planning and vision enabled him to tap a key corner with heavy movement at Kandivali area.
         </p>
       </div>
-    </div>
 
-    <div class="testimonial">
-      <div class="video-container">
+      <div class="video-box">
         <iframe width="560" height="315" 
-          src="https://youtu.be/tJwvI5Ov3i0" 
+          src="https://www.youtube.com/embed/tJwvI5Ov3i0?si=laxYSz9raARpwcmk" 
           title="YouTube video player" 
           frameborder="0" 
           allowfullscreen>
         </iframe>
-      </div>
-      <div class="content">
-        <h3>Shri. Chandan Relan</h3>
+        <h2 style="text-align: left;">Shri. Chandan Relan</h2>
         <p>
-          Operating an upscale Grocery store, Shri Chandan Relan is now tapping into the key college crowd 
-          and a busy road section of almost 200 meters at Goregaon West. 
-          We still await the boost to his chocolate sales due to the added college crowd.
+          Operating an upscale Grocery store, Shri Chandan Relan is now tapping into the key college crowd
+          and a busy road section of almost 200 meters at Goregaon West. We still await the boost to his chocolate sales
+          due to the added college crowd.
         </p>
       </div>
     </div>
 
-  </div>
-</section> -->
+</section>
 
  <section class="page-section-ptb bg-overlay-black-80 jarallax" data-speed="0.6" data-img-src="images/server-bw.jpg" data-img-src-2="images/second-image.jpg">
   <div class="container">
@@ -1028,46 +1073,6 @@ governance platforms.
   </div>
 </section>
 
-
-
-<!-- OUR CLIENTS -->
-<!--  
-<section class="our-clients theme-bg text-white page-section-ptb">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 col-md-12">
-      <div class="owl-carousel" data-items="5" data-sm-items="4" data-xs-items="3" data-xx-items="2">
-         <div class="item">
-           <img class="mx-auto img-fluid" src="images/adani2.png" alt="">
-         </div>
-         <div class="item">
-           <img class="mx-auto img-fluid" src="images/IIIT.png" alt="">
-         </div>
-         <div class="item">
-           <img class="mx-auto img-fluid" src="images/ap.png" alt="">
-         </div>
-         <div class="item">
-           <img class="mx-auto img-fluid" src="images/jsw.png" alt="">
-         </div>
-         <div class="item">
-           <img class="mx-auto img-fluid" src="images/mb.png" alt="">
-         </div>
-         <div class="item">
-           <img class="mx-auto img-fluid" src="images/sadbhav.jpg" alt="">
-         </div>
-		  <div class="item">
-           <img class="mx-auto img-fluid" src="images/vnit.jpeg" alt="">
-         </div>
-		  <div class="item">
-           <img class="mx-auto img-fluid" src="images/woi.png" alt="">
-         </div>
-         
-         </div>
-      </div>
-    </div>
-  </div>
-</section>
--->
 
 
 <!--=================================
