@@ -39,6 +39,93 @@
 .text-white{
     color: #fff;
   }
+
+  /* ============== Hero Section =========== */
+  .hero-section{
+    height: 80vh;
+    /* background-color:#770026; */
+    background-color: white;
+    @media (max-width:750px) {
+      height: 120vh;
+    }
+  }
+
+  .hero-content{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+    gap: 10px;
+
+    @media (max-width:750px) {
+      flex-direction: column;
+    }
+
+  }
+
+  .hero-heading,.hero-photo{
+    width: 50%;
+
+    @media (max-width:750px) {
+      width: 100%;
+      height: 50%;
+    }
+  }
+
+  .hero-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+  }
+  .head-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (max-width:750px) {
+      gap: 5px;
+    }
+  }
+
+  .button-service{
+    display: flex;
+    flex-wrap: wrap ;
+
+    gap: 10px;
+  }
+  .heading-text{
+    color: #770026;
+  }
+  .heading-para{
+    color: #626262;
+  }
+
+  .hero-photo{
+    width: 400px;
+    height: 70vh;
+    @media (min-width: 550px) and (max-width: 750px) {
+      width: 100%;
+      height: 50vh;
+    }
+
+     @media (max-width:750px) {
+      width: 100%;
+      height: 50%;
+    }
+
+  }
+
+  .hero-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 </style>
 
 </head>
@@ -72,66 +159,62 @@
 <!--=================================
  banner -->
 
- <section class="rev-slider">
-  <div id="rev_slider_272_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="webster-slider-6" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
-<!-- START REVOLUTION SLIDER 5.4.6.3 fullwidth mode -->
-  <div id="rev_slider_272_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.6.3">
-<ul>  <!-- SLIDE  -->
-    <li data-index="rs-764" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="revolution/assets/slider-06/100x50_95d68-bg.jpg" data-delay="7990" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-    <!-- MAIN IMAGE -->
-        <img src="images/bg1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-    <!-- LAYERS -->
+<section class="hero-section">
 
+  <div class="container hero-content">
 
-<!-- LAYER NR. 18 -->
-    <div class="tp-caption   tp-resizeme" id="slide-765-layer-1" data-x="center" data-hoffset="" data-y="center" data-voffset="10" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 90px; line-height: 100px; font-weight: 400; background-color: rgba(0, 0, 0, 0.7); color: #FFFFFF; letter-spacing: 0px;font-family:Montserrat;">We Run your Business IT Smoothly? </div>
+    <div class="hero-heading">
 
-    
+      <div class="head-text">
+        <h2 class="heading-text"> Empowering Networks, Securing Futures</h2>
 
+        <p class="heading-para"> Immunity Networks is your trusted IT solutions and managed 
+          services partner in India, delivering enterprise networking, cybersecurity, 
+          cloud infrastructure, and industry-specific technology solutions. We help 
+          businesses achieve secure, high-performance connectivity while future
+          proofing their digital transformation journey. 
+        </p>
 
-  <!-- SLIDE  -->
-    <li data-index="rs-765" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="revolution/assets/slider-06/100x50_c81f3-ac32d-bg.jpg" data-delay="8000" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-    <!-- MAIN IMAGE -->
-        <img src="images/bg2.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-    <!-- LAYERS -->
+      </div> 
 
-    <!-- LAYER NR. 18 -->
-    <div class="tp-caption   tp-resizeme" id="slide-765-layer-1" data-x="center" data-hoffset="" data-y="center" data-voffset="10" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 90px; line-height: 100px; font-weight: 400; background-color: rgba(0, 0, 0, 0.7); color: #FFFFFF; letter-spacing: 0px;font-family:Montserrat;">Effective and Reliable IT Services
- </div>
+      <div class="button-service">
+        <button class="button button-gradient">Explore Solutions</button>
+        <button class="button button-gradient">Get a Free Consultation</button>
+      </div>
 
+    </div>
 
-    <!-- LAYER NR. 25 -->
-   
-  </li>
-</ul>
-<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div> </div>
-</div>
+    <div class="hero-photo">
+      <img class="heroImg" src="https://i.pinimg.com/1200x/db/cd/50/dbcd50246a249fc54b360de60929e8a5.jpg" alt="Hero Img">
+    </div>
+  </div>
+
 </section>
 
-    
+
         
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header align-items-start">
-                    <div class="modal-title" id="exampleModalLabel">
-                       <div class="section-title mb-10">
-                        <h6>EXPERTISE</h6>
-                        <h2>Modal title</h2>
-                        <p>We are an innovative agency. We develop and design customers around the world. Our clients are some.</p>
-                      </div>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                   <span class="dropcap square">Y</span>ou can use model anywhere in your website consectetur adipisicing elit. At vel sed corporis delectus quo ea molestias a ab ad officiis eaque natus animi reiciendis sint beatae, dolor inventore praesentium lorem qui.
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header align-items-start">
+          <div class="modal-title" id="exampleModalLabel">
+              <div class="section-title mb-10">
+              <h6>EXPERTISE</h6>
+              <h2>Modal title</h2>
+              <p>We are an innovative agency. We develop and design customers around the world. Our clients are some.</p>
             </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="dropcap square">Y</span>ou can use model anywhere in your website consectetur adipisicing elit. At vel sed corporis delectus quo ea molestias a ab ad officiis eaque natus animi reiciendis sint beatae, dolor inventore praesentium lorem qui.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
 	
 
 
