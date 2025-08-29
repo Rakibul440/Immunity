@@ -108,10 +108,6 @@
   .hero-photo{
     width: 400px;
     height: 70vh;
-    @media (min-width: 550px) and (max-width: 750px) {
-      width: 100%;
-      height: 50vh;
-    }
 
      @media (max-width:750px) {
       width: 100%;
@@ -125,6 +121,132 @@
     height: 100%;
     object-fit: cover;
   }
+
+  /* ====== Product Section ========== */
+
+  /* Product Slider */
+.product-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.product-card {
+  flex: 0 0 300px; /* fixed width for each card */
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  position: relative;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Sale Tag */
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #800020;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+/* Product Image */
+.product-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Overlay Buttons */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-card:hover .overlay {
+  display: flex;
+}
+
+.overlay button {
+  background: #800020;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+
+.overlay button:hover {
+  background: #a00030;
+}
+
+/* Product Info */
+h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+  text-align: center;
+  color: #444;
+}
+
+.price {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+/* Hide scrollbar (optional) */
+.product-slider::-webkit-scrollbar {
+  display: none;
+}
+.product-slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ========= Case Study ======== */
+
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  min-height: 300px;
+}
 
 </style>
 
@@ -158,7 +280,68 @@
 
 <!--=================================
  banner -->
+ 
+ <section class="rev-slider">
+  <div id="rev_slider_272_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="webster-slider-6" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+<!-- START REVOLUTION SLIDER 5.4.6.3 fullwidth mode -->
+  <div id="rev_slider_272_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.6.3">
+<ul>  <!-- SLIDE  -->
+    <li data-index="rs-764" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="revolution/assets/slider-06/100x50_95d68-bg.jpg" data-delay="7990" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+    <!-- MAIN IMAGE -->
+        <img src="images/bg1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+    <!-- LAYERS -->
 
+
+<!-- LAYER NR. 18 -->
+    <div class="tp-caption   tp-resizeme" id="slide-765-layer-1" data-x="center" data-hoffset="" data-y="center" data-voffset="10" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 90px; line-height: 100px; font-weight: 400; background-color: rgba(0, 0, 0, 0.7); color: #FFFFFF; letter-spacing: 0px;font-family:Montserrat;">We Run your Business IT Smoothly? </div>
+
+    
+
+
+  <!-- SLIDE  -->
+    <li data-index="rs-765" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="revolution/assets/slider-06/100x50_c81f3-ac32d-bg.jpg" data-delay="8000" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+    <!-- MAIN IMAGE -->
+        <img src="images/bg2.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+    <!-- LAYERS -->
+
+    <!-- LAYER NR. 18 -->
+    <div class="tp-caption   tp-resizeme" id="slide-765-layer-1" data-x="center" data-hoffset="" data-y="center" data-voffset="10" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 90px; line-height: 100px; font-weight: 400; background-color: rgba(0, 0, 0, 0.7); color: #FFFFFF; letter-spacing: 0px;font-family:Montserrat;">Effective and Reliable IT Services
+ </div>
+
+
+    <!-- LAYER NR. 25 -->
+   
+  </li>
+</ul>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div> </div>
+</div>
+</section>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header align-items-start">
+          <div class="modal-title" id="exampleModalLabel">
+              <div class="section-title mb-10">
+              <h6>EXPERTISE</h6>
+              <h2>Modal title</h2>
+              <p>We are an innovative agency. We develop and design customers around the world. Our clients are some.</p>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="dropcap square">Y</span>ou can use model anywhere in your website consectetur adipisicing elit. At vel sed corporis delectus quo ea molestias a ab ad officiis eaque natus animi reiciendis sint beatae, dolor inventore praesentium lorem qui.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- =========== HERO SECTION ============ -->
 <section class="hero-section">
 
   <div class="container hero-content">
@@ -190,33 +373,6 @@
   </div>
 
 </section>
-
-
-        
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header align-items-start">
-          <div class="modal-title" id="exampleModalLabel">
-              <div class="section-title mb-10">
-              <h6>EXPERTISE</h6>
-              <h2>Modal title</h2>
-              <p>We are an innovative agency. We develop and design customers around the world. Our clients are some.</p>
-            </div>
-          </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <span class="dropcap square">Y</span>ou can use model anywhere in your website consectetur adipisicing elit. At vel sed corporis delectus quo ea molestias a ab ad officiis eaque natus animi reiciendis sint beatae, dolor inventore praesentium lorem qui.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-</div>
-	
-
 
 <section class="page-section-ptb">
   <div class="container">
@@ -289,6 +445,201 @@
     </div>
 </section>
 
+<!-- ========== WHY US ================= -->
+<section class="page-section-ptb">
+  <div class="container">
+   <div class="row">
+     <div class="col-lg-4 col-md-4">
+        <div class="section-title mb-20">
+           
+           <h2> Comprehensive IT Solutions for Every Business</h2>
+
+           <p>Get the most out of your IT by letting our Integrated, quality managed Service delivery handle IT.</p>
+
+         </div>
+         <p>We are cost-efficient, security-Centric, Expert backed. Above all, we make your venture more productive, which results in less pressure on IT, much better uptime, and much better performance.
+ </p>
+     </div>
+     <div class="col-lg-7 col-md-7 col-md-offset-1 sm-mt-40">
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="feature-text left-icon mb-40">
+              <div class="feature-icon">
+              <span class="fa fa-cloud-upload theme-color" aria-hidden="true"></span>
+              </div>
+              <div class="feature-info">
+                <h5>Enterprise Networking Solutions in India</h5>
+                <p>From LAN/WAN design to Wi-Fi 6 campus networks, we build high-speed, 
+reliable infrastructure that keeps your teams connected. </p>
+                  <a class="button icon-color mt-10" href="managed-backup.html">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="feature-text left-icon mb-40">
+              <div class="feature-icon">
+              <span class="fa fa-shield theme-color" aria-hidden="true"></span>
+              </div>
+              <div class="feature-info">
+                <h5> Cybersecurity Services India </h5>
+                <p>Protect your business with next-generation firewalls, endpoint security, 
+                    network monitoring, and threat detection. </p>
+                  <a class="button icon-color mt-10" href="managed-security.html">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="feature-text left-icon xs-mb-40">
+              <div class="feature-icon">
+              <span class="ti-headphone theme-color" aria-hidden="true"></span>
+              </div>
+              <div class="feature-info">
+                <h5> Cloud Managed Services India</h5>
+                <p>Secure, scalable public, private, and hybrid cloud solutions with backup, 
+DRaaS, and multi-cloud integration.</p>
+                  <a class="button icon-color mt-10" href="managed-communication.html">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="feature-text left-icon">
+              <div class="feature-icon">
+              <span class="fa fa-support theme-color" aria-hidden="true"></span>
+              </div>
+              <div class="feature-info">
+                <h5>PM-WANI Wi-Fi Solutions</h5>
+                <p>Enable affordable and accessible internet with PM-WANI-compliant Wi-Fi 
+hotspots for public spaces, campuses, and enterprises.</p>
+                  <a class="button icon-color mt-10" href="managed-it-support.html">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="feature-text left-icon xs-mb-40">
+              <div class="feature-icon">
+              <span class="ti-headphone theme-color" aria-hidden="true"></span>
+              </div>
+              <div class="feature-info">
+                <h5>GPON & FTTH Networking</h5>
+                <p>High-speed fiber solutions for residential, commercial, and rural 
+broadband connectivity. </p>
+                  <a class="button icon-color mt-10" href="managed-communication.html">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="feature-text left-icon">
+              <div class="feature-icon">
+              <span class="fa fa-support theme-color" aria-hidden="true"></span>
+              </div>
+              <div class="feature-info">
+                <h5> Managed IT Services India</h5>
+                <p>24/7 network monitoring, helpdesk support, and IT infrastructure 
+                    management for uninterrupted operations.</p>
+                  <a class="button icon-color mt-10" href="managed-it-support.html">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+          </div>
+        </div>
+
+     </div>
+   </div>
+  </div>
+ </section>
+        
+<!-- =========== PRODUCT SECTION ============= -->
+
+<section class="product-section">
+  <div class="container">
+    <div class="product-slider">
+      <div class="product-card">
+        <span class="tag">Sale</span>
+        <img src="images/products/product1.jpeg" alt="Immunity Lotus Alpha">
+        <div class="overlay">
+          <button style="width: 60%;">Quick View</button>
+          <button style="width: 60%;">Add to Cart</button>
+        </div>
+        <h3>Immunity Lotus Alpha</h3>
+        <p class="price">₹15,000.00 <span class="old-price">₹18,000.00</span></p>
+      </div>
+
+      <div class="product-card">
+        <span class="tag">Sale</span>
+        <img src="images/products/product2.jpeg" alt="Immunity Lotus Alpha LX">
+        <div class="overlay">
+          <button style="width: 60%;">Quick View</button>
+          <button style="width: 60%;">Add to Cart</button>
+        </div>
+        <h3>Immunity Lotus Alpha LX</h3>
+        <p class="price">₹45,000.00 <span class="old-price">₹65,000.00</span></p>
+      </div>
+
+      <div class="product-card">
+        <span class="tag">Sale</span>
+        <img src="images/products/product5.jpeg" alt="Immunity Lotus Alpha OD">
+        <div class="overlay">
+          <button style="width: 60%;">Quick View</button>
+          <button style="width: 60%;">Add to Cart</button>
+        </div>
+        <h3>Immunity Lotus Alpha OD</h3>
+        <p class="price">₹19,000.00 <span class="old-price">₹25,000.00</span></p>
+      </div>
+
+      <div class="product-card">
+        <span class="tag">Sale</span>
+        <img src="images/products/product3.jpeg" alt="Immunity Lotus Alpha OD">
+        <div class="overlay">
+          <button style="width: 60%;">Quick View</button>
+          <button style="width: 60%;">Add to Cart</button>
+        </div>
+        <h3>Immunity Lotus Alpha OD</h3>
+        <p class="price">₹19,000.00 <span class="old-price">₹25,000.00</span></p>
+      </div>
+
+      <div class="product-card">
+        <span class="tag">Sale</span>
+        <img src="images/products/product4.jpeg" alt="Immunity Lotus Alpha OD">
+        <div class="overlay">
+          <button style="width: 60%;">Quick View</button>
+          <button style="width: 60%;">Add to Cart</button>
+        </div>
+        <h3>Immunity Lotus Alpha OD</h3>
+        <p class="price">₹19,000.00 <span class="old-price">₹25,000.00</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== FREE BANNER ============ -->
+
+  <section class="action-box theme-bg full-width">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-12 col-md-12">
+    <div class="action-box-text">
+    <h2 style="text-align: left; color: white;">Ready to Upgrade Your Network? </h2>
+    <p>Get in touch with Immunity Networks for a free consultation and discover 
+how our networking, cloud, and security solutions can help your business 
+grow faster, safer, and smarter. </p>
+    </div>
+    <div class="action-box-button">
+    <a class="button button-border white" href="contactus.html">
+    <span>Request a Callback</span>
+    <i class="fa fa-download"></i>
+    </a>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+  </section>
+
+
 <section class="about page-section-ptb">
   <div class="container">
     <div class="row justify-content-center">
@@ -338,37 +689,7 @@
   </div>
 </section>
 
-<section class="theme-bg page-section-ptb">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 text-center">
-        <h2 class="mb-30 text-white">Are you ready to get free from your IT Problems? Get free with us!</h2>
-		  <h2 class="mb-30 text-white">IT Service Management</h2>
-        <p class="mb-30 text-white">At Immunity Networks, IT outsourcing services company offers a complete end to end proactive and expert-driven IT management of your business IT services. Let us sweat while you reap the benefits of a well-managed IT Setup.</p>
-        <p class="mb-30 text-white">Our round the clock managed IT services help you build a strong business with an excellent internal support system. You will be ready to handle most business IT challenges through a well-established plan. 
-</p>    
-		  <p class="mb-30 text-white">Immunity Networks is the One-stop IT solutions and services organization that will ensure prompt execution of your business ideas.</p> 
-		  <h3 class="mb-30 text-white">IT Outsourcing Services</h3>
-		  <p class="mb-30 text-white">Our goal is to help our customers overcome business IT challenges by understanding the business objectives and aligning the IT function to employ the industry’s best practices.
-</p>    
-
-		<a class="button white" onclick="openPopup('myModal1')">
-  <span>KNOW MORE</span>
-</a>
-		  <div id="myModal1" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closePopup('myModal1')">&times;</span>
-    <iframe src="https://forms.zohopublic.com/immunity/form/BasicSignup1/formperma/gZJdqgm-Kmq8q3PsFSCCSzoVfznV7IwH3PGw4L6LFZg"></iframe>
-  </div>
-</div>
-
-		  		<!--<a class="button white" target="_blank" href="https://forms.zohopublic.com/immunity/form/BasicSignup1/formperma/gZJdqgm-Kmq8q3PsFSCCSzoVfznV7IwH3PGw4L6LFZg"><span> KNOW MORE </span></a>-->
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="page-section-pt">
+<section class="page-section-pt" style="padding-bottom: 20px;">
   <div class="container">
      <div class="row justify-content-center text-center">
         <div class="col-lg-10 col-md-10 ">
@@ -405,7 +726,38 @@
   </div>
 </section>
 
+<section class="theme-bg page-section-ptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 text-center">
+        <h2 class="mb-30 text-white">Are you ready to get free from your IT Problems? Get free with us!</h2>
+		  <h2 class="mb-30 text-white">IT Service Management</h2>
+        <p class="mb-30 text-white">At Immunity Networks, IT outsourcing services company offers a complete end to end proactive and expert-driven IT management of your business IT services. Let us sweat while you reap the benefits of a well-managed IT Setup.</p>
+        <p class="mb-30 text-white">Our round the clock managed IT services help you build a strong business with an excellent internal support system. You will be ready to handle most business IT challenges through a well-established plan. 
+</p>    
+		  <p class="mb-30 text-white">Immunity Networks is the One-stop IT solutions and services organization that will ensure prompt execution of your business ideas.</p> 
+		  <h3 class="mb-30 text-white">IT Outsourcing Services</h3>
+		  <p class="mb-30 text-white">Our goal is to help our customers overcome business IT challenges by understanding the business objectives and aligning the IT function to employ the industry’s best practices.
+</p>    
+
+		<a class="button white" onclick="openPopup('myModal1')">
+  <span>KNOW MORE</span>
+</a>
+		  <div id="myModal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closePopup('myModal1')">&times;</span>
+    <iframe src="https://forms.zohopublic.com/immunity/form/BasicSignup1/formperma/gZJdqgm-Kmq8q3PsFSCCSzoVfznV7IwH3PGw4L6LFZg"></iframe>
+  </div>
+</div>
+
+		  		<!--<a class="button white" target="_blank" href="https://forms.zohopublic.com/immunity/form/BasicSignup1/formperma/gZJdqgm-Kmq8q3PsFSCCSzoVfznV7IwH3PGw4L6LFZg"><span> KNOW MORE </span></a>-->
+      </div>
+    </div>
+  </div>
+</section>
+
 <br>
+
 <section class="o-hidden">
   <div class="container-fluid p-0">
    <div class="row no-gutter">
@@ -494,80 +846,151 @@ governance platforms.
   </div>
 </section>
 
-
-<section class="page-section-ptb">
+<!-- ======== Case Studies Section ======= -->
+<section class="case-studies">
   <div class="container">
-   <div class="row">
-     <div class="col-lg-4 col-md-4">
-        <div class="section-title mb-20">
-           
-           <h2> Comprehensive IT Solutions for Every Business</h2>
-           <p>Get the most out of your IT by letting our Integrated, quality managed Service delivery handle IT.</p>
-         </div>
-         <p>We are cost-efficient, security-Centric, Expert backed. Above all, we make your venture more productive, which results in less pressure on IT, much better uptime, and much better performance.
- </p>
-     </div>
-     <div class="col-lg-7 col-md-7 col-md-offset-1 sm-mt-40">
-         <div class="row">
-           <div class="col-lg-6 col-md-6 col-sm-6">
-             <div class="feature-text left-icon mb-40">
-               <div class="feature-icon">
-               <span class="fa fa-cloud-upload theme-color" aria-hidden="true"></span>
-               </div>
-               <div class="feature-info">
-                 <h5>Cloud Managed Services India</h5>
-                  <p>Secure, scalable public, private, and hybrid cloud solutions with backup, 
-                      DRaaS, and multi-cloud integration. </p>
-                   <a class="button icon-color mt-10" href="managed-backup.html">Read More <i class="fa fa-angle-right"></i></a>
-              </div>
-            </div>
-           </div>
-           <div class="col-lg-6 col-md-6 col-sm-6">
-             <div class="feature-text left-icon mb-40">
-               <div class="feature-icon">
-               <span class="fa fa-shield theme-color" aria-hidden="true"></span>
-               </div>
-               <div class="feature-info">
-                 <h5> Cybersecurity Services India </h5>
-                  <p>Protect your business with next-generation firewalls, endpoint security, 
-                      network monitoring, and threat detection. </p>
-                   <a class="button icon-color mt-10" href="managed-security.html">Read More <i class="fa fa-angle-right"></i></a>
-              </div>
-            </div>
-           </div>
-         </div>
-         <div class="row">
-           <div class="col-lg-6 col-md-6 col-sm-6">
-             <div class="feature-text left-icon xs-mb-40">
-               <div class="feature-icon">
-               <span class="ti-headphone theme-color" aria-hidden="true"></span>
-               </div>
-               <div class="feature-info">
-                 <h5> Enterprise Networking Solutions in India</h5>
-                  <p>From LAN/WAN design to Wi-Fi 6 campus networks, we build high-speed, 
-                      reliable infrastructure that keeps your teams connected.</p>
-                   <a class="button icon-color mt-10" href="managed-communication.html">Read More <i class="fa fa-angle-right"></i></a>
-              </div>
-            </div>
-           </div>
-           <div class="col-lg-6 col-md-6 col-sm-6">
-             <div class="feature-text left-icon">
-               <div class="feature-icon">
-               <span class="fa fa-support theme-color" aria-hidden="true"></span>
-               </div>
-               <div class="feature-info">
-                 <h5> Managed IT Services India</h5>
-                  <p>24/7 network monitoring, helpdesk support, and IT infrastructure 
-                      management for uninterrupted operations.</p>
-                   <a class="button icon-color mt-10" href="managed-it-support.html">Read More <i class="fa fa-angle-right"></i></a>
-              </div>
-            </div>
-           </div>
-         </div>
-     </div>
-   </div>
+
+    <h2>Case Studies</h2>
+    <div class="case-grid">
+      <div class="card">Case Study 1</div>
+      <div class="card">Case Study 2</div>
+      <div class="card">Case Study 3</div>
+    </div>
+
   </div>
- </section>
+</section>
+<br>
+<hr>
+<section class="case-studies" style="padding-bottom:20px ;">
+  <div class="container">
+
+    <h2>Accordions</h2>
+    <div class="case-grid">
+      <div class="card">Accordion 1</div>
+      <div class="card">Accordion 2</div>
+      <div class="card">Accordion 3</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========= Testimonials ========= -->
+
+<section class="page-section-ptb gray-bg">
+  <div class="container">
+  <div class="row">
+  <div class="col-md-8">
+  <div class="section-title">
+  <h2 class="title-effect">Testimonials</h2>
+  </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-lg-6">
+  <div class="owl-carousel" data-nav-arrow="false" data-nav-dots="true" data-items="1" data-lg-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1">
+  <div class="item"><div class="testimonial bottom_pos light">
+  <div class="testimonial-avatar"> <img alt src="images/jsw.png"> </div>
+  <div class="testimonial-info">It has always been a challenge to manage our Desktop Security technology on top of our daily responsibilities. But now with the help of Immunity Networks, we have more time to take care of business matters. Their personalized service plan has helped increase productivity, saving us both time and money.- Rahul Kumar,</div>
+  <div class="author-info"> <strong>- Deputy Manager IT, - <span>JSW ISPAT STEEL LIMITED.</span></strong> </div>
+  </div>
+  </div>
+  <div class="item">
+  <div class="testimonial bottom_pos light">
+  <div class="testimonial-avatar"> <img alt src="images/tatalogo.png"> </div>
+  <div class="testimonial-info">We found Immunity Networks team to be extremely professional expert in their domain who flawlessly implemented RSA logger solution at our data centre. Right from product demonstration till complete implementation, the team has been proactive, supportive and delivered as per expectations.</div>
+  <div class="author-info"> <strong>- Amit Wadke, Project Manager, <span>TATA Consultancy Services (TCS).</span></strong> </div>
+  </div>
+  </div>
+  <div class="item">
+  <div class="testimonial bottom_pos light">
+  <div class="testimonial-avatar"> <img alt src="images/woi.png"> </div>
+  <div class="testimonial-info">Exceptional customer service, Value of the association with us.</div>
+  <div class="author-info"> <strong>- Sandeep Narker, Network administrator, <span> Western Outdoor Interactive Pvt. Ltd.</span></strong> </div>
+  </div>
+  </div>
+  <div class="item">
+  <div class="testimonial bottom_pos light">
+  <div class="testimonial-avatar"> <img alt src="images/bhel_logo.png"> </div>
+  <div class="testimonial-info">Unique business needs – Immunity professionals have taken time to completely understand the requirement of BHEL-PSWR. Either in case of Antivirus Installation or web gateway or Messaging gateway, in each implementation Immunity professionals have submitted a good design first and then implemented the things in structured manner. We really appreciate the efforts they have put in.</div>
+  <div class="author-info"> <strong>- Mr. S L SIDAR, <span>Bharat Heavy Electrical Limited.</span></strong> </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-6 sm-mt-50">
+  <div class="clients-list clients-border column-3">
+  <ul class="list-unstyled">
+  <li>
+  <img class="img-fluid mx-auto" src="images/adani.png" alt>
+  </li>
+  <li>
+  <img class="img-fluid mx-auto" src="images/moserbaer.png" alt>
+  </li>
+  <li>
+  <img class="img-fluid mx-auto" src="images/APL.jpg" alt>
+  </li>
+  <li>
+  <img class="img-fluid mx-auto" src="images/vnitlogo.png" alt>
+  </li>
+  <li>
+  <img class="img-fluid mx-auto" src="images/iiit.png" alt>
+  </li>
+  <li>
+  <img class="img-fluid mx-auto" src="images/sadbhav-logo.png" alt>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+<!-- ========= YOUTUBE VIDEO ============ -->
+
+<!-- <section>
+  <div class="container">
+
+    <h2>See Our Customers Talk About Us</h2>
+    
+    <div class="testimonial">
+      <div class="video-container">
+        <iframe width="560" height="315" 
+          src="https://youtu.be/Rsq0gZkvTng" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="content">
+        <h3>Shri. Prakash Patil</h3>
+        <p>
+          A visionary at Kandivali, Shri. Prakash Patil is one of the first adopters of PMWANI in Mumbai City. 
+          His smart planning and vision enabled him to tap a key corner with heavy movement at Kandivali area.
+        </p>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="video-container">
+        <iframe width="560" height="315" 
+          src="https://youtu.be/tJwvI5Ov3i0" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="content">
+        <h3>Shri. Chandan Relan</h3>
+        <p>
+          Operating an upscale Grocery store, Shri Chandan Relan is now tapping into the key college crowd 
+          and a busy road section of almost 200 meters at Goregaon West. 
+          We still await the boost to his chocolate sales due to the added college crowd.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section> -->
 
  <section class="page-section-ptb bg-overlay-black-80 jarallax" data-speed="0.6" data-img-src="images/server-bw.jpg" data-img-src-2="images/second-image.jpg">
   <div class="container">
@@ -605,6 +1028,10 @@ governance platforms.
   </div>
 </section>
 
+
+
+<!-- OUR CLIENTS -->
+<!--  
 <section class="our-clients theme-bg text-white page-section-ptb">
   <div class="container">
     <div class="row">
@@ -640,7 +1067,7 @@ governance platforms.
     </div>
   </div>
 </section>
-
+-->
 
 
 <!--=================================
