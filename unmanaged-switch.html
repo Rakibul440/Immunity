@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -30,6 +30,158 @@
     <!-- Responsive -->
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
 
+
+  <style>
+    /* ============== Section 2 =========== */
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Section-2 (Sidebar) */
+    .sidebar {
+      flex: 1 1 250px;
+      background: #f8f8f8;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .service-list {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .service-list li {
+      background: #eee;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .service-list li.active {
+      background: #a50034;
+      color: #fff;
+    }
+
+    .consult-box {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .consult-box h4 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 16px;
+      background: #a50034;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .download-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .download-box img {
+      width: 24px;
+    }
+
+    /* Section-3 */
+    .section-3 {
+      flex: 3 1 600px;
+      padding: 20px;
+      background: #fff;
+    }
+
+    .section-3 h2 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .section-3 p {
+      font-size: 14px;
+      margin-top: 8px;
+      color: #555;
+    }
+
+    /* Section-4 */
+    .section-4 {
+      flex: 3 1 600px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px;
+      background: #fafafa;
+    }
+
+    .section-4 .text {
+      flex: 1 1 300px;
+      padding-right: 20px;
+    }
+
+    .section-4 h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #a50034;
+    }
+
+    .section-4 p {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .section-4 .image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .section-4 .image img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .section-4 {
+        flex-direction: column;
+      }
+
+      .section-4 .text {
+        padding-right: 0;
+      }
+    }
+    /* ============================ */
+  </style>
+
 </head>
 
 <body>
@@ -50,6 +202,8 @@
          header -->
         <!--=================================
         page-title-->
+
+        <!-- ======= Section Img ======== -->
         <section class="page-title bg-overlay-black-60 parallax" data-jarallax="{&quot;speed&quot;: 0.6}" style="background-image: url(images/enterprise2.jpg);">
             <div class="container">
                 <div class="row">
@@ -67,28 +221,51 @@
             </div>
         </section>
 
+        <!-- =========== Section 2 =========== -->
         <section class="white-bg page-section-pt service-04">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 align-self-center">
-                        <div class="section-title">
-							<h6>Understanding the Simplicity Behind Seamless Connectivity
-</h6>
-                            <h2 class="title-effect">Role of Unmanaged Switches</h2>
-                        </div>
-                        <p>Unmanaged network switches are easy-to-use, plug-and-play devices that expand your wired network without any setup. Ideal for small businesses and home offices, they let you connect multiple devices like PCs, printers, and IP cameras for fast, stable performance.
-</p>
-                        <p>They’re more affordable than managed switches and don’t require any technical knowledge. While they lack advanced features, unmanaged switches offer reliable connectivity for everyday tasks like file sharing, internet access, and video calls.
-</p>
-                        <p>Perfect for simple setups, unmanaged switches are quiet, compact, and energy-efficient—making them a practical choice for small offices, shops, and remote work environments.
-</p>                    
+              <div class="container">
+                    <!-- Section-2 Sidebar -->
+                    <aside class="sidebar">
+                    <h3>Our Service</h3>
+                    <ul class="service-list">
+                        <li class="active">Managed Backup</li>
+                        <li>Managed Security</li>
+                        <li>Managed Cloud</li>
+                        <li>Managed Communication</li>
+                        <li>Managed IT Support</li>
+                    </ul>
+
+                    <div class="consult-box">
+                        <h4>Free Consultation:</h4>
+                        <p>Talk to our Specialists.<br>Book your free IT Consultation now and put your Organization’s IT Roadmap in place.</p>
+                        <a href="#" class="btn">BOOK NOW</a>
                     </div>
-                    <div class="col-lg-6 p-5 col-md-6 m-0 m-md-5 service-04-video xs-mt-30">
-                        <img class="img-fluid mx-auto" src="images/enterprise1.jpg" alt="End Point Security">
+
+                    <div class="download-box">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/download.png" alt="Download">
+                        <span>Corporate brochure<br><small>Click on the icon to download</small></span>
                     </div>
-                </div>
-				
-				<div class="row">
+                    </aside>
+
+                    <!-- Section-4 -->
+                    <section class="section-4">
+                        <!-- Section-3 -->
+                        <section class="">
+                        <h2>BUSINESS DATA ARE EVERYWHERE, DON’T RISK IT!</h2>
+                        <p>Accidents happen, Keep your data insurance handy. Get started with our continuous data protection and secure your organization against any data loss that can completely disrupt your business operations</p>
+                        </section>
+                    <div class="text">
+                        <h4>Understanding the Simplicity Behind Seamless Connectivity</h4>
+                        <h3>Role of Unmanaged Switches</h3>
+                        <p>Unmanaged network switches are easy-to-use, plug-and-play devices that expand your wired network without any setup. Ideal for small businesses and home offices, they let you connect multiple devices like PCs, printers, and IP cameras for fast, stable performance.</p>
+                        <p>They’re more affordable than managed switches and don’t require any technical knowledge. While they lack advanced features, unmanaged switches offer reliable connectivity for everyday tasks like file sharing, internet access, and video calls.</p>
+                        <p>Perfect for simple setups, unmanaged switches are quiet, compact, and energy-efficient—making them a practical choice for small offices, shops, and remote work environments.</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/enterprise1.jpg" alt="Network Switch">
+                    </div>
+                    </section>
+                    <div class="row">
   <div class="col-lg-4 col-md-4 col-sm-4">
   <div class="feature-text left-icon mt-50 xs-mt-20">
   <div class="feature-icon">
@@ -123,10 +300,13 @@
   </div>
   </div>
   </div>
-  </div>
-            </div>
+</div>
+                </div>
+
         </section>
-<section class="about-05-split split-section gray-bg page-section-ptb">
+
+        
+<section class="about-05-split split-section gray-bg page-section-ptb">hey
     <div class="side-background">
         <div class="col-lg-6 img-side img-left">
             <div class="img-holder img-cover" style="background-image: url(images/gatway31.jpeg);">
