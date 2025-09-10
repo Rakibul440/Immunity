@@ -239,45 +239,74 @@
     }
     /* ======================== */
     
-    .features-section_R {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      max-width: 1200px;
-      margin: auto;
+        :root{
+      --bg:#b75b5b; /* dusty red background */
+      --accent:#ff8b2d; /* orange accent */
+      --card-shadow: 0 8px 18px rgba(0,0,0,0.25);
+      --text:#111;
+      --muted:#444;
+      --white:#fff;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     }
 
-    .card_R {
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
+        /* card wrapper */
+    .card-wrap_R{
+      width:250px; /* similar to provided image */
+      position:relative;
     }
 
-    .card_R img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
+    .card-image_R{
+      height:200px;
+      border-radius:4px;
+      background-size:cover;
+      background-position:center;
+      box-shadow: var(--card-shadow);
     }
 
-    .card-content_R {
-      padding: 20px;
-      border-left: 4px solid #ff7f32; /* orange accent */
-      background: #fff;
+    /* white info_R box overlapping the image */
+    .info_R{
+      position: absolute;
+      left:18px; /* shift right a touch to match image */
+      bottom: -70%; /* overlap */
+      width: calc(100% - 36px);
+      background:var(--white);
+      padding:18px 18px 18px 22px;
+      box-shadow: var(--card-shadow);
+      border-radius:4px;
+      box-sizing:border-box;
     }
 
-    .card-content_R h3 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      color: #111;
+    /* thin accent stripe on the left of the info_R box */
+    .info_R::before{
+      content:'';
+      position:absolute;
+      left:0;
+      top:0;
+      bottom:0;
+      height: 35%;
+      width:6px;
+      background:linear-gradient(180deg,var(--accent), #ff6b00);
+      border-top-left-radius:4px;
+      border-bottom-left-radius:4px;
     }
 
-    .card-content_R p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #444;
+    .h3_R{
+      margin:0 0 8px 10px; /* additional offset so text sits right of the accent */
+      font-size:18px;
+      color:var(--text);
+      font-weight:700;
+    }
+    .p_R{
+      margin:0 0 0 10px;
+      color:var(--muted);
+      line-height:1.45;
+      font-size:13px;
+    }
+
+    /* small responsive tweak */
+    @media (max-width:380px){
+      .card-wrap_R{width:92%;}
+      .card-image_R{height:150px}
     }
 
   </style>
@@ -305,19 +334,24 @@
 
         <!-- ======= Section Img ======== -->
         <section class="page-title bg-overlay-black-60 parallax" data-jarallax="{&quot;speed&quot;: 0.6}" style="background-image: url(images/R-enterprize.jpeg);">
-            <div class="container">
-                <div class="row">
+            <div class="container" >
+              <ul class="page-breadcrumb" style="text-align: left; padding-bottom: 30px;">
+                  <li><a href="index.html"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-double-right"></i></li>
+                  <li><span>Accessories</span> </li>
+              </ul>
+            </div>
+
+          <div class="container">
+              
+                <div class="row">  
                     <div class="col-lg-12">
+
                         <div class="page-title-name">
                             <!-- <h1>Unmanaged Switch </h1> -->
-						<ul class="page-breadcrumb">
-                            <li><a href="index.html"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-double-right"></i></li>
-                            <li><span>Accessories</span> </li>
-                        </ul>
                              <h1>Transceiver</h1>
                             <p>Simple. Reliable. The Backbone of Your Network Success</p>
                         </div>
-<!--                         <ul class="page-breadcrumb">
+                        <!-- <ul class="page-breadcrumb">
                             <li><a href="index.html"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-double-right"></i></li>
                             <li><span>Accessories</span> </li>
                         </ul> -->
@@ -330,25 +364,32 @@
         <section class="white-bg page-section-pt service-04">
               <div class="container">
                     <!-- Section-2 Sidebar -->
-                    <aside class="sidebar">
-                    <h3>Products</h3>
-                    <ul class="service-list">
-                        <li class="active">T1G</li>
-                        <li>T10G</li>
-                        <li>T1G</li>
-                        <li>T10G</li>
-                        <!-- <li>Managed IT Support</li> -->
-                    </ul>
+                    <aside class="sidebar" style="display: flex;justify-content: space-between;flex-direction: column;">
+                      <div>
+
+                        <h3>Products</h3>
+                        <ul class="service-list">
+                            <li class="active">T1G</li>
+                            <li>T10G</li>
+                            <li>T1G</li>
+                            <li>T10G</li>
+                            
+                        </ul>
+
+                      </div>
 
                     <div class="consult-box">
-                        <h4 style="color: white;">Free Consultation:</h4>
-                        <p>Talk to our Specialists.<br>Book your free IT Consultation now and put your Organization’s IT Roadmap in place.</p>
-                        <a href="#" class="btn">BOOK NOW</a>
+                        <h3 style="color: white; text-transform: uppercase;font-size: 20px;">Free Consultation: <br>Talk to our Specialists.</h3>
+                        <p><br>Book your free IT Consultation now and put your Organization’s IT Roadmap in place.</p>
+                        <a href="#" class="btn" style="border-radius: 3px;">BOOK NOW</a>
                     </div>
-                    <p>Download</p>
-                    <div class="download-box" style="cursor: pointer;">
-                        <i class="fa fa-download" style="color: white;background-color: #780126;padding: 10px;"></i>
-                        <span><b style="color: #780126;">Corporate brochure</b><br><small>Click on the icon to download</small></span>
+                    <div>
+
+                      <p>Download</p>
+                      <div class="download-box" style="cursor: pointer;">
+                          <i class="fa fa-download" style="color: white;background-color: #780126;padding: 10px;"></i>
+                          <span><b style="color: #780126;">Corporate brochure</b><br><small>Click on the icon to download</small></span>
+                      </div>
                     </div>
                     </aside>
 
@@ -361,16 +402,37 @@
                         </section>
                     <div class="text">
                         <h4>Redefining Interference-Free Communication</h4>
-                        <h3>Seamless Connectivity for Modern Networks</h3>
+
+                        <div class="section-title text-center" style="display: none;">
+                          <h2 class="title-effect"></h2>
+                        </div>
+
+                    <div class="section-title ">
+                      <h2 class="title-effect"  style="color: #780126; padding: 0;">Seamless Connectivity for Modern Networks</h2>
+                    </div>
+
+                        <img class="float-right" src="images/R-enterprise1.jpeg" alt="Network Switch" style="float: right;width: 430px; padding: 0  ;height: auto; margin: 0 0 20px 30px;">
+
                         <p>In today’s fast-evolving digital world, uninterrupted and reliable communication forms the backbone of every industry. Immunity LinkOptix is designed to meet the growing demand for faster, more efficient, and interference-free data transfer. By combining high-speed optical technology with advanced transceiver capabilities, it ensures smooth bidirectional communication that keeps pace with modern network requirements.</p>
                         <p>What sets Immunity LinkOptix apart is its ability to deliver high performance under demanding conditions. Its advanced engineering ensures not only rapid data transmission but also resilience against electromagnetic interference and signal disruptions. This makes it ideal for mission-critical industries where even the slightest delay or data loss can impact operations. Whether it’s powering telecommunications, data centers, or secure enterprise networks, the device offers consistency, stability, and trusted performance.</p>
-                        <p>Built with scalability in mind, Immunity LinkOptix integrates effortlessly into existing infrastructures while preparing businesses for the next generation of communication technologies. With its balance of speed, efficiency, and reliability, it provides a future-ready solution for industries looking to strengthen their digital backbone.</p>
+
+                      <p>Built with scalability in mind, Immunity LinkOptix integrates effortlessly into existing infrastructures while preparing businesses for the next generation of communication technologies. With its balance of speed, efficiency, and reliability, it provides a future-ready solution for industries looking to strengthen their digital backbone.</p>
+
                     </div>
-                    <div class="image">
+                    <!-- <div class="image">
                         <img src="images/R-enterprise1.jpeg" alt="Network Switch">
-                    </div>
+                    </div> -->
+                      <!-- <p>Built with scalability in mind, Immunity LinkOptix integrates effortlessly into existing infrastructures while preparing businesses for the next generation of communication technologies. With its balance of speed, efficiency, and reliability, it provides a future-ready solution for industries looking to strengthen their digital backbone.</p> -->
                     </section>
-                    <div class="row">
+
+
+
+                    <div class="row" style="padding: 20px 0 0 0;">
+
+                    <div class="section-title text-center">
+                      <h2 class="title-effect text-center">Features</h2>
+                    </div>
+
                         <div class="col-lg-4 col-md-4 col-sm-4">
                         <div class="feature-text left-icon mt-50 xs-mt-20">
                         <div class="feature-icon">
@@ -637,7 +699,7 @@
                         <a href="#" class="btn">See More</a>
                     </div>
                     <div class="card">
-                        <h2>T10G</h2>
+                        <h2>T1G</h2>
                         <p>Reliable 1G transceiver designed for stable, cost-efficient communication across diverse applications..</p>
                         <img src="images/R-products.jpeg" alt="US-8MP Port Switch">
                         <div class="features">
@@ -655,7 +717,7 @@
                         <a href="#" class="btn">See More</a>
                     </div>
                     <div class="card">
-                        <h2>T10G</h2>
+                        <h2>T1G</h2>
                         <p>Ultra-fast 10G transceiver delivering high-capacity, low-latency connectivity for next-gen networks.</p>
                         <img src="images/R-products.jpeg" alt="US-8MP Port Switch">
                         <div class="features">
@@ -738,7 +800,7 @@
         <section class="features-section_R" >
 
 
-            <div class="card_R">
+            <!-- <div class="card_R">
             <img src="images/black_tech.jpg" alt="Service Providers">
             <div class="card-content_R">
                 <h3 style="color: #780126;">Service Providers</h3>
@@ -746,36 +808,18 @@
                Scale seamlessly with cutting-edge optical technology and stay ahead of the ever-growing bandwidth demands. LinkOptix delivers high-speed, low-latency communication that empowers service providers to enhance customer experiences and reduce downtime. With flexible integration, it adapts to evolving infrastructure without compromising performance.
                 </p>
             </div>
+            </div> -->
+
+                <div class="card-wrap_R">
+                <!-- Replace 'your-image.jpg' with the actual path or URL of your image -->
+                <div class="card-image_R" style="background-image:url('images/black_tech.jpg')" role="img" aria-label="network background"></div>
+                <div class="info_R">
+                  <h3 class="h3_R">Enterprise</h3>
+                  <p class="p_R">Enable secure, real-time data exchange across departments and branches to gain a true competitive edge. Immunity LinkOptix ensures data integrity, reduced interference, and smooth collaboration</p>
+                </div>
+              </div>
             </div>
 
-            <div class="card_R">
-            <img src="images/black_tech.jpg" alt="Network Security">
-            <div class="card-content_R">
-                <h3 style="color: #780126;">Enterprise</h3>
-                <p>
-                Enable secure, real-time data exchange across departments and branches to gain a true competitive edge. Immunity LinkOptix ensures data integrity, reduced interference, and smooth collaboration, helping enterprises accelerate decision-making and improve operational efficiency. Built for scalability, it grows with your business needs.
-                </p>
-            </div>
-            </div>
-
-            <div class="card_R">
-            <img src="images/black_tech.jpg" alt="Enforce QoS">
-            <div class="card-content_R">
-                <h3 style="color: #780126;">Data Centers</h3>
-                <p>
-                Future-proof your interconnects with LinkOptix, ensuring uninterrupted connectivity between regional, state, and local institutions. Its energy-efficient design and interference immunity support the high-density environments of modern data centers. Achieve maximum uptime and reliability while reducing the total cost of ownership.
-                </p>
-            </div>
-            </div>
-            <div class="card_R">
-            <img src="images/black_tech.jpg" alt="Advanced L2 Features">
-            <div class="card-content_R">
-                <h3 style="color: #780126;">Government</h3>
-                <p>
-                Build trusted, proactive networks for servers, switches, and storage systems that power critical government operations. LinkOptix ensures secure data transmission, regulatory compliance, and reliable inter-agency communication. Designed for resilience, it supports long-term national and local infrastructure needs.
-                </p>
-            </div>
-            </div>
         </section>
         <br>
         <br>
